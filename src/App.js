@@ -5,8 +5,8 @@ import {
     faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 
-import About from './components/About/About';
-import SocialLinks from './components/SocialLinks/SocialLinks';
+import Nav from './components/Nav/Nav';
+import Body from './components/Body/Body';
 
 import AppStyled from './AppStyled';
 
@@ -14,8 +14,8 @@ library.add(faGithub, faLinkedin);
 
 const App = () => (
     <AppStyled>
-        <About />
-        <SocialLinks />
+        <Nav />
+        <Body />
     </AppStyled>
 );
 

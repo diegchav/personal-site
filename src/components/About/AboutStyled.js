@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const AboutStyled = styled.section`
+const AboutStyled = styled.div`
     text-align: center;
 
     .name {
