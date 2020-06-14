@@ -4,7 +4,7 @@ const IconLinkStyled = styled.a`
     margin: 0 .25rem;
 
     & svg {
-        color: #000;
+        color: ${props => props.color};
     }
 `;
 

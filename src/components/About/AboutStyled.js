@@ -2,19 +2,18 @@ import styled from 'styled-components';
 
 const AboutStyled = styled.div`
     text-align: center;
+    color: ${props => props.fontColor};
 
     .name {
-        color: #1e88e5;
         font-size: 3rem;
         line-height: .5rem;
     }
 
     hr {
-        border: 1px solid #bbb;
+        border: 1px solid ${props => props.borderColor};
     }
 
     .role {
-        color: #1e88e5;
         font-size: 2rem;
         line-height: 1rem;
     }

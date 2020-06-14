@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import { ThemeContext } from 'styled-components';
+
+import Toggle from '../Toggle/Toggle';
 
 import NavStyled from './NavStyled';
 
-const Header = () => (
-    <NavStyled>
-        <img className="logo" src={process.env.PUBLIC_URL + '/img/logo.png'} alt="Logo" />
-    </NavStyled>
-);
+const Nav = ({ onToggle }) => {
+    const { borderColor } = useContext(ThemeContext);
 
-export default Header;
+    return (
+        <NavStyled borderColor={borderColor}>
+            <img className="logo" src={process.env.PUBLIC_URL + '/img/logo.png'} alt="Logo" />
+            <Toggle onToggle={onToggle} />
+        </NavStyled>
+    );
+};
+
+Nav.propTypes = {
+    onToggle: PropTypes.func.isRequired
+};
+
+export default Nav;

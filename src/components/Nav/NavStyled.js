@@ -5,7 +5,7 @@ const HeaderStyled = styled.nav`
     display: flex;
     align-items: center;
     padding: 0 3rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${props => props.borderColor};
 
     .logo {
         width: 32px;
