@@ -11,7 +11,9 @@ const Nav = ({ onToggle }) => {
 
     return (
         <NavStyled borderColor={borderColor}>
-            <img className="logo" src={process.env.PUBLIC_URL + '/img/logo.png'} alt="Logo" />
+            <img className="logo"
+                src={process.env.PUBLIC_URL + '/img/logo.png'}
+                alt="Logo" />
             <Toggle onToggle={onToggle} />
         </NavStyled>
     );

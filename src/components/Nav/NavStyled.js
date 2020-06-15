@@ -8,8 +8,6 @@ const HeaderStyled = styled.nav`
     border-bottom: 1px solid ${props => props.borderColor};
 
     .logo {
-        width: 32px;
-        height: 32px;
         cursor: pointer;
     }
 `;
