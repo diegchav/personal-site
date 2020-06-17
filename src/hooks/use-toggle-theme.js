@@ -29,7 +29,7 @@ const useToggleTheme = () => {
             setTheme(themeLight);
             setCurrentTheme(THEME_LIGHT);
         }
-    });
+    }, []);
 
     return [theme, toggleTheme];
 };
