@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
     themeLight,
@@ -20,6 +20,16 @@ const useToggleTheme = () => {
             setCurrentTheme(THEME_DARK);
         }
     };
+
+    useEffect(() => {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme(themeDark);
+            setCurrentTheme(THEME_DARK);
+        } else {
+            setTheme(themeLight);
+            setCurrentTheme(THEME_LIGHT);
+        }
+    });
 
     return [theme, toggleTheme];
 };
